@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constitution Word Search</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Constitution Word Search</h1>
+            <div class="header-icons">
+                <i id="constitution-icon" class="fas fa-scroll" title="Constitution Information"></i>
+                <i id="instructions-icon" class="fas fa-info-circle" title="Game Instructions"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="game-container">
+        <div class="grid-section">
+            <div id="puzzle" class="puzzle-grid"></div>
+        </div>
+
+        <div class="word-list-section">
+            <div id="word-list">
+                <h3>Words to Find</h3>
+                <ul id="words"></ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modals -->
+    <div id="instructions-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Game Instructions</h2>
+            <div class="instruction-details">
+                <p>🔍 Click letters to form words listed in the side panel</p>
+                <p>📝 Find all constitutional terms</p>
+                <p>🏆 Complete the game to learn more about the Constitution</p>
+                <div class="instruction-icons">
+                    <i class="fas fa-arrow-right"></i>
+                    <i class="fas fa-lightbulb"></i>
+                    <i class="fas fa-flag"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <div id="constitution-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>About the Constitution</h2>
+            <div class="constitution-info">
+                <img src="con.jpg" height="150px" width="150px" alt="Constitution" class="constitution-image">
+                <p>The Constitution is the supreme law that provides the framework for governance, fundamental rights, and the principles of democracy.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="completion-modal" class="modal">
+        <div class="modal-content">
+            <h2>Congratulations!</h2>
+            <p>You've found all the constitutional words!</p>
+            <div class="completion-actions">
+                <button id="restart-game">Play Again</button>
+                <button id="learn-more">Learn More</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Explore and Learn about the Constitution</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
